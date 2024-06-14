@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { login } from '../../services/api';
+import { setAuthToken } from '../utils/Authutils';
 
 const Login: React.FC = () => {
     const [email, setEmail] = useState<string>('');
@@ -27,6 +28,9 @@ const Login: React.FC = () => {
             const response = await login({ email, password });
 
             if (response.status === 'success') {
+                const token = response.data;
+                setAuthToken(token);
+                console.log("Token to be saved:", token);
                 router.push('/dashboard');
             } else {
                 setError(response.data || 'Login failed');

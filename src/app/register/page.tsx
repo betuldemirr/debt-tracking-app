@@ -47,7 +47,8 @@ const Register: React.FC = () => {
                 {error && <div className="alert alert-danger">{error}</div>}
                 <form onSubmit={onSubmit}>
                     <div className="form-group mb-3">
-                        <label htmlFor="name">Name</label>
+                    <br />
+                        <label htmlFor="name">Name (username)</label>
                         <input
                             type="text"
                             className="form-control"
