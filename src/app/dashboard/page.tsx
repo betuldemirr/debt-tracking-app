@@ -153,7 +153,7 @@ const Dashboard: React.FC = () => {
             {error && <div className="alert alert-danger">{error}</div>}
 
             <div className="card mb-4">
-                <div className="card-header bg-info">
+                <div className="card-header">
                     <h2>Debt List</h2>
                 </div>
                 <div className="card-body">
@@ -172,7 +172,7 @@ const Dashboard: React.FC = () => {
             </div>
 
             <div className="card">
-                <div className="card-header bg-danger">
+                <div className="card-header">
                     <h2>Add a New Debt</h2>
                 </div>
                 <div className="card-body">
